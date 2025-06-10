@@ -18,8 +18,8 @@ jobs:
       with:
         registry: ffmpegacr.azurecr.io
         username: ${{ secrets.ACR_USERNAME }}
-	password: ${{ secrets.ACR_PASSWORD }}
-	
+        password: ${{ secrets.ACR_PASSWORD }}
+
     - name: Build and Push Docker image
       run: |
         docker build -t ffmpegacr.azurecr.io/mp4converter:latest .
